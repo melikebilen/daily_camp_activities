@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'Activity.dart';
 
-class Activities with ChangeNotifier{
+class Activities extends ChangeNotifier{
   List<Activity> _activities= [
     Activity(
       name: 'Learn Turkish With Melike',

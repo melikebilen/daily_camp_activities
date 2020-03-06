@@ -1,9 +1,10 @@
 import 'package:daily_camp_activities/screens/activities_screen.dart';
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
 import './screens/counselor_login_screen.dart';
 import './screens/login_screen.dart';
 import './screens/choose_activities_screen.dart';
+import './providers/Activities.dart';
 
 
 void main() => runApp(MyApp());
@@ -11,7 +12,14 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return  MultiProvider(
+      providers: [
+        ChangeNotifierProvider.value(
+          value: Activities(),  
+        ),
+      ],
+    child:
+    MaterialApp(
           title: 'Daily Camp Activities',
           theme: ThemeData(
             primarySwatch: Colors.pink,
@@ -26,8 +34,9 @@ class MyApp extends StatelessWidget {
          //   ProductDetailScreen.routeName: (ctx) => ProductDetailScreen(),
          //   CartScreen.routeName: (ctx) => CartScreen(),
          //   OrdersScreen.routeName: (ctx) => OrdersScreen(),
-          }
-          );
+          },
+        
+          ));
     
   }
 }
