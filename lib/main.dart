@@ -1,9 +1,13 @@
 import 'package:daily_camp_activities/screens/activities_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import './screens/counselor_login_screen.dart';
 import './screens/login_screen.dart';
 import './screens/choose_activities_screen.dart';
+import './screens/admin_login_screen.dart';
+import './screens/edit_activities_screen.dart';
+
 import './providers/Activities.dart';
 
 
@@ -31,9 +35,8 @@ class MyApp extends StatelessWidget {
             CounselorLoginScreen.routeName: (ctx) => CounselorLoginScreen(),
             ActivitiesScreen.routeName: (ctx)=> ActivitiesScreen(),
             ChooseActivitiesScreen.routeName: (ctx)=>ChooseActivitiesScreen(),
-         //   ProductDetailScreen.routeName: (ctx) => ProductDetailScreen(),
-         //   CartScreen.routeName: (ctx) => CartScreen(),
-         //   OrdersScreen.routeName: (ctx) => OrdersScreen(),
+            AdminLoginScreen.routeName: (ctx)=> AdminLoginScreen(),
+            EditActivitiesScreen.routeName: (ctx)=> EditActivitiesScreen(),
           },
         
           ));

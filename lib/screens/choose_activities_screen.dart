@@ -5,6 +5,7 @@ class ChooseActivitiesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('Choose the activities for your camper!'),),
       body: Text('Choose activities for camper blah blah'),
       
     );

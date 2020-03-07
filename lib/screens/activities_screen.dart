@@ -10,8 +10,14 @@ class ActivitiesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Activities for today!'),),
       body: ListView.builder(
+        itemCount: activitiesData.activities.length,
         itemBuilder: (_,index){
-          return ListTile(title:Text(activitiesData.activities[index].name));
+          return Card(
+            elevation: 5,
+            child: ListTile(
+              title:Text(activitiesData.activities[index].name),
+              subtitle: Text('Counselor: ${activitiesData.activities[index].activityCounselor.toString()}'),)
+            );
         }),
         
         );

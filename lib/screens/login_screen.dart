@@ -1,3 +1,4 @@
+import 'package:daily_camp_activities/screens/admin_login_screen.dart';
 import 'package:daily_camp_activities/widgets/app_drawer.dart';
 import 'package:flutter/material.dart';
 import './counselor_login_screen.dart';
@@ -36,7 +37,9 @@ class LoginScreen extends StatelessWidget {
           RaisedButton(
             child: Text('Admin',style: TextStyle(fontSize: 20),),
             color: Theme.of(context).accentColor,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushReplacementNamed(AdminLoginScreen.routeName);
+            },
           )
         ],
       ),
