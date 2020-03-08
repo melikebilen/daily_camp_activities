@@ -2,13 +2,13 @@ import 'package:flutter/cupertino.dart';
 
 import 'Counselor.dart';
 
-enum period { firstActivity, secondActivity, thirdActivity }
+//enum period { firstActivity, secondActivity, thirdActivity }
 
 class Activity {
   final String id;
   final String activityCounselor;
   final String name;
-  final period;
+  final String period;
 
   Activity({
   @required this.id , 

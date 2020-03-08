@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import './add_activity_screen.dart';
 import 'activities_screen.dart';
 import '../providers/Activities.dart';
+import '../providers/Activity.dart';
 
 class EditActivitiesScreen extends StatelessWidget {
   static const routeName = '/edit-activities-screen';
+  
+  
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +18,7 @@ class EditActivitiesScreen extends StatelessWidget {
       appBar: AppBar(title: Text('Edit Activities'),
       actions: <Widget>[
         IconButton(icon: Icon(Icons.add),
-        onPressed:activitiesData.addActivity ,)
+        onPressed:(){ Navigator.of(context).pushNamed(AddActivityScreen.routeName);}),
       ],
       ),
       body: ListView.builder(
@@ -28,12 +32,10 @@ class EditActivitiesScreen extends StatelessWidget {
                 title:Text(activitiesData.activities[index].name),
                 subtitle: Text('Counselor: ${activitiesData.activities[index].activityCounselor.toString()}'),)
               ),
+              //HOW CAN I KNOW IF I DELETED IT!!
+              onDismissed:(direction){activitiesData.deleteActivity(activitiesData.activities[index].id);},
           );
         }),
-      
-
-
-
     );
   }
 }

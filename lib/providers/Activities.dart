@@ -9,25 +9,25 @@ class Activities extends ChangeNotifier{
       id:'1',
       name: 'Learn Turkish With Melike',
       activityCounselor:'Melike',
-      period: period.firstActivity,
+      period: '1',
     ),
       Activity(
       id:'2',  
       name: 'Open Computers',
       activityCounselor:'Ceri',
-      period: period.secondActivity,
+      period: '2',
     ),
        Activity(
       id:'3',
       name: 'Volleyball',
       activityCounselor:'Selin',
-      period: period.secondActivity,
+      period:'3',
     ),
        Activity(
          id:'2',
       name: 'Tennis',
       activityCounselor:'Ryan',
-      period: period.secondActivity,
+      period: '2',
     ),
 
   ];
@@ -38,7 +38,8 @@ List<Activity> get activities{
 }
 
 //Sadece adminler tarafından değiştirilebilicek
-void addActivity(){
+void addActivity(Activity a){
+_activities.add(a);
 notifyListeners();
 }
 

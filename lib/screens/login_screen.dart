@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
             child: Text('Admin',style: TextStyle(fontSize: 20),),
             color: Theme.of(context).accentColor,
             onPressed: () {
-              Navigator.of(context).pushReplacementNamed(AdminLoginScreen.routeName);
+              Navigator.of(context).pushNamed(AdminLoginScreen.routeName);
             },
           )
         ],

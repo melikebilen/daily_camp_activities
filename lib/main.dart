@@ -7,6 +7,7 @@ import './screens/login_screen.dart';
 import './screens/choose_activities_screen.dart';
 import './screens/admin_login_screen.dart';
 import './screens/edit_activities_screen.dart';
+import './screens/add_activity_screen.dart';
 
 import './providers/Activities.dart';
 
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
             ChooseActivitiesScreen.routeName: (ctx)=>ChooseActivitiesScreen(),
             AdminLoginScreen.routeName: (ctx)=> AdminLoginScreen(),
             EditActivitiesScreen.routeName: (ctx)=> EditActivitiesScreen(),
+            AddActivityScreen.routeName: (ctx)=> AddActivityScreen(),
           },
         
           ));
