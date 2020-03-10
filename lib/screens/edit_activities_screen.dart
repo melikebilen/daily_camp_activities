@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import './add_activity_screen.dart';
 import 'activities_screen.dart';
 import '../providers/Activities.dart';
+import '../widgets/activity_item.dart';
 import '../providers/Activity.dart';
 
 class EditActivitiesScreen extends StatelessWidget {
@@ -26,12 +27,7 @@ class EditActivitiesScreen extends StatelessWidget {
         itemBuilder: (_,index){
           return Dismissible(
             key: ValueKey(activitiesData.activities.length),
-               child: Card(
-              elevation: 5,
-              child: ListTile(
-                title:Text(activitiesData.activities[index].name),
-                subtitle: Text('Counselor: ${activitiesData.activities[index].activityCounselor.toString()}'),)
-              ),
+               child: ActivityItem(index),
               //HOW CAN I KNOW IF I DELETED IT!!
               onDismissed:(direction){activitiesData.deleteActivity(activitiesData.activities[index].id);},
           );

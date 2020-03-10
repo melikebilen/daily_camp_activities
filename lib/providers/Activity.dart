@@ -12,7 +12,7 @@ class Activity {
 
   Activity({
   @required this.id , 
+  @required this.activityCounselor,
   @required this.name, 
-  @required this.period, 
-  @required this.activityCounselor});
+  @required this.period, });
 }

@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
             child: Text('Counselor',style: TextStyle(fontSize: 20),),
             color: Theme.of(context).accentColor,
             onPressed: () {
-              Navigator.of(context).pushReplacementNamed(CounselorLoginScreen.routeName);
+              Navigator.of(context).pushNamed(CounselorLoginScreen.routeName);
             },
           ),
           SizedBox(
