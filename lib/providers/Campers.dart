@@ -3,20 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'Camper.dart';
 import 'Bunk.dart';
+import 'Bunks.dart';
 class Campers extends ChangeNotifier {
 
 final List<Camper> campers = [
   Camper(
     id:'camper1',
     name:'samantha',
-    surname:'surname',
-    bunk: Bunk.bunks[0],),
+    surname:'Parker',
+    bunk:Bunks.bunks[0]),
 
     Camper(
     id:'camper2',
-    name:'elizabeth',
-    surname:'lastname',
-    bunk: Bunk.bunks[1],),
+    name:'Elizabeth',
+    surname:'Green',
+    bunk: Bunks.bunks[1],),
 ];
 
 }

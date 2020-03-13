@@ -1,21 +1,17 @@
+import 'package:flutter/cupertino.dart';
+
 import 'Camper.dart';
 import 'Counselors.dart';
 import 'Counselor.dart';
+import 'package:provider/provider.dart';
 
 class Bunk{
-  // final id; Database için eklenebilir
+ // final id; Database için eklenebilir
   final String name;
-   List<Camper> campers;
-   List<Counselor> counselor;
-
+   List<Camper> campers=[];
+   List<Counselor> counselors=[];
+     
   Bunk(this.name);
-
-static List<Bunk> bunks = [
-  Bunk('G1'),
-  Bunk('G2'),
-  Bunk('G3'),
-];
-  
 
 
 

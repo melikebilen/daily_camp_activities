@@ -11,8 +11,10 @@ class ActivityItem extends StatelessWidget {
     return Card(
               elevation: 5,
               child: ListTile(
-                title:Text(activitiesData.activities[index].name),
-                subtitle: Text('Counselor: ${activitiesData.activities[index].activityCounselor.toString()}'),)
+                title:Text(activitiesData.activities[index].name ),
+                subtitle: Text('Counselor:${activitiesData.activities[index].activityCounselor.toString()}   '),
+                trailing: Text( 'Minor:${activitiesData.activities[index].period.toString()}')
+                )
               );
   }
 }

@@ -12,6 +12,7 @@ import './screens/add_activity_screen.dart';
 import './providers/Activities.dart';
 import './providers/Campers.dart';
 import './providers/Counselors.dart';
+import './providers/Bunks.dart';
 
 
 void main() => runApp(MyApp());
@@ -30,6 +31,9 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider.value(
           value: Counselors(),  
         ),
+          ChangeNotifierProvider.value(
+          value: Bunks(),  
+        )
       ],
     child:
     MaterialApp(

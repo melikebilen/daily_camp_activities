@@ -8,6 +8,7 @@ CamperItem(this.index);
   Widget build(BuildContext context) {
     final campersData=Provider.of<Campers>(context,listen: false);
     return ListTile(
+      // onTap: , KAMPÇININ AKTİVİTELERİNİ SEÇMESİNİ SAĞLAYACAK KISMA GEÇ!
       title:Text('${campersData.campers[index].name} ${campersData.campers[index].surname}'),
       subtitle: Text('${campersData.campers[index].bunk.name} ',
     ));
