@@ -24,14 +24,14 @@ class CounselorLoginScreen extends StatelessWidget {
                 title: Text(
                   Provider.of<Bunks>(context, listen: false)
                       .bunkList[index]
-                      .name,
+                      ,
                   style: TextStyle(fontSize: 20),
                 ),
                 onTap: () => Navigator.of(context).pushNamed(
                     ChosenBunksCampersScreen.routeName,
                     arguments: Provider.of<Bunks>(context, listen: false)
                         .bunkList[index]
-                        .name),
+                        ),
               );
             }));
   }

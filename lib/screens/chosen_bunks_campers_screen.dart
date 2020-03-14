@@ -10,20 +10,18 @@ class ChosenBunksCampersScreen extends StatelessWidget {
   static const routeName = '/chosen-bunks-campers-screen';
   @override
   Widget build(BuildContext context) {
-    String nameOfBunk=ModalRoute.of(context).settings.arguments; //Bunk'ın adını biliyorum
-
+    final String nameOfBunk=ModalRoute.of(context).settings.arguments; //Bunk'ın adını biliyorum
 
     final campersList=Provider.of<Campers>(context,listen: false);
 
-    List<Camper> uniqueBunk = [...campersList.campers.where((camper){ return camper.bunk.name == nameOfBunk;})];
+     List<Camper> campersInASpecificBunk= [...campersList.campers.where((c){ return (nameOfBunk==c.bunk);})];
 
     return Scaffold(
       appBar:AppBar(title: Text('$nameOfBunk\'s Campers!'),),
       body: ListView.builder(
-      itemCount: uniqueBunk.length,
-      itemBuilder:(context,index){
-      //CamperItem(index).while(campersData.campers[index].bunk.name== nameOfBunk)
-        return CamperItem(index) ;
+      itemCount:campersInASpecificBunk.length,
+      itemBuilder:(_,index){
+        return CamperItem(index, campersInASpecificBunk) ;
       } ),
        
 

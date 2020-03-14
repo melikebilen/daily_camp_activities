@@ -8,6 +8,7 @@ import './screens/admin_login_screen.dart';
 import './screens/edit_activities_screen.dart';
 import './screens/add_activity_screen.dart';
 import './screens/chosen_bunks_campers_screen.dart';
+import './screens/camper_daily_activity_screen.dart';
 
 import './providers/Activities.dart';
 import './providers/Campers.dart';
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
           ),
           home: LoginScreen(),
           routes: {
+            CamperDailyActivityScreen.routeName:(ctx)=> CamperDailyActivityScreen(),
             CounselorLoginScreen.routeName: (ctx) => CounselorLoginScreen(),
             ActivitiesScreen.routeName: (ctx)=> ActivitiesScreen(),
             AdminLoginScreen.routeName: (ctx)=> AdminLoginScreen(),

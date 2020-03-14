@@ -9,22 +9,34 @@ class Campers extends ChangeNotifier {
 
 final List<Camper> campers = [
   Camper(
-    id:'camper1',
+    id:DateTime.now().toString(),
     name:'samantha',
     surname:'Parker',
-    bunk: Bunks.bunks[0]),
+    bunk: 'G1'),
 
     Camper(
-    id:'camper2',
+    id:DateTime.now().toString(),
     name:'Elizabeth',
     surname:'Green',
-    bunk: Bunks.bunks[1]),
+    bunk:'G3'),
     
     Camper(
-    id:'camper3',
+    id:DateTime.now().toString(),
     name:'Rachel',
     surname:'A',
-    bunk: Bunks.bunks[2],),
+    bunk: 'G1'),
+
+    Camper(
+    id:DateTime.now().toString(),
+    name:'BCD',
+    surname:'ABC',
+    bunk: 'G4'),
+
+    Camper(
+    id:DateTime.now().toString(),
+    name:'44444444444444',
+    surname:'ABC',
+    bunk: 'G4'),
 ];
 
 

@@ -5,7 +5,7 @@ class Camper{
   final String id;
   final String name;
   final String surname;
-  final Bunk bunk;  // final Bunk bunk;
+  final String bunk;  // final Bunk bunk;
   List<Activity> dailyActivitiesOfCamper=[]; 
   //Also the activities they will choose!
 
