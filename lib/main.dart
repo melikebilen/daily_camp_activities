@@ -4,10 +4,10 @@ import 'package:provider/provider.dart';
 
 import './screens/counselor_login_screen.dart';
 import './screens/login_screen.dart';
-import './screens/choose_activities_screen.dart';
 import './screens/admin_login_screen.dart';
 import './screens/edit_activities_screen.dart';
 import './screens/add_activity_screen.dart';
+import './screens/chosen_bunks_campers_screen.dart';
 
 import './providers/Activities.dart';
 import './providers/Campers.dart';
@@ -47,10 +47,10 @@ class MyApp extends StatelessWidget {
           routes: {
             CounselorLoginScreen.routeName: (ctx) => CounselorLoginScreen(),
             ActivitiesScreen.routeName: (ctx)=> ActivitiesScreen(),
-            ChooseActivitiesScreen.routeName: (ctx)=>ChooseActivitiesScreen(),
             AdminLoginScreen.routeName: (ctx)=> AdminLoginScreen(),
             EditActivitiesScreen.routeName: (ctx)=> EditActivitiesScreen(),
             AddActivityScreen.routeName: (ctx)=> AddActivityScreen(),
+            ChosenBunksCampersScreen.routeName:(ctx)=>ChosenBunksCampersScreen(),
           },
         
           ));

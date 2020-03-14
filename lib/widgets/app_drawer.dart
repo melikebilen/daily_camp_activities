@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../screens/activities_screen.dart';
-import '../screens/choose_activities_screen.dart';
-
+//import '../screens/choose_activities_screen.dart';
+import '../screens/counselor_login_screen.dart';
 class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class AppDrawer extends StatelessWidget {
           ListTile(
             title: Text('Choose Campers\' Activities'),
             onTap: () {
-              Navigator.of(context).pushNamed(ChooseActivitiesScreen.routeName);
+              Navigator.of(context).pushNamed(CounselorLoginScreen.routeName);
             },
           ),
         ],

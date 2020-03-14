@@ -8,9 +8,8 @@ import 'package:provider/provider.dart';
 class Bunk{
  // final id; Database için eklenebilir
   final String name;
-   List<Camper> campers=[];
-   List<Counselor> counselors=[];
-     
+ //  List<Camper> campers=[];
+ //  List<Counselor> counselors=[];    
   Bunk(this.name);
 
 

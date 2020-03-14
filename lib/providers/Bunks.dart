@@ -11,6 +11,16 @@ class Bunks extends ChangeNotifier{
   Bunk('G4'),
 ];
 
+//   List<String> bunks = [
+//  'G1','G2','G3','G4'
+// ];
+
+
+//  List<String> get bunkList{
+//    return [...bunks];
+//  }
+
+
 
  List<Bunk> get bunkList{
    return [...bunks];

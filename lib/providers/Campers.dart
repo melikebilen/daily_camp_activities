@@ -5,19 +5,27 @@ import 'Camper.dart';
 import 'Bunk.dart';
 import 'Bunks.dart';
 class Campers extends ChangeNotifier {
+  
 
 final List<Camper> campers = [
   Camper(
     id:'camper1',
     name:'samantha',
     surname:'Parker',
-    bunk:Bunks.bunks[0]),
+    bunk: Bunks.bunks[0]),
 
     Camper(
     id:'camper2',
     name:'Elizabeth',
     surname:'Green',
-    bunk: Bunks.bunks[1],),
+    bunk: Bunks.bunks[1]),
+    
+    Camper(
+    id:'camper3',
+    name:'Rachel',
+    surname:'A',
+    bunk: Bunks.bunks[2],),
 ];
+
 
 }
