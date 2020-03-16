@@ -14,31 +14,14 @@ class CamperDailyActivityScreen extends StatefulWidget {
 }
 
 class _CamperDailyActivityScreenState extends State<CamperDailyActivityScreen> {
+  Activity minor1 = null;
+  Activity minor2 = null;
+  Activity minor3 = null;
   @override
   Widget build(BuildContext context) {
     Camper chosenCamper = ModalRoute.of(context).settings.arguments;
-    chosenCamper.dailyActivitiesOfCamper = [null, null, null];
 
-// DropdownButton getButton(String minor, int a, List<Activity> actList){
-//     return  DropdownButton<Activity>(
-//             hint: Text(minor),
-//             onChanged: (value) {
-//               setState(() {
-//                 chosenCamper.dailyActivitiesOfCamper[a] = value;
-//               });
-//             },
-//             if(a==0){
-//                 items: Provider.of<Activities>(context).activities.map((act) {
-//               return DropdownMenuItem<Activity>(
-//                 value: act,
-//                 child: Text(act.name),
-//               );
-//             }).toList();
-//             }
-          
-//           );
-// }
-
+    chosenCamper.dailyActivitiesOfCamper = [minor1, minor2, minor3];
 
     return Scaffold(
       appBar: AppBar(
@@ -49,51 +32,81 @@ class _CamperDailyActivityScreenState extends State<CamperDailyActivityScreen> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           DropdownButton<Activity>(
-            hint: Text('Minor 1'),
-            onChanged: (value) {
-              setState(() {
-                chosenCamper.dailyActivitiesOfCamper[0] = value;
-              });
-            },
-            items: Provider.of<Activities>(context).activities1.map((act) {
+            value: minor1,
+            hint: minor1 == null ? Text('Minor 1') : Text(minor1.name),
+            items: Provider.of<Activities>(context)
+                .activities1
+                .map((Activity act) {
               return DropdownMenuItem<Activity>(
                 value: act,
                 child: Text(act.name),
               );
             }).toList(),
-          ),
-          SizedBox(height: 10,),
-          DropdownButton<Activity>(
-            hint: Text('Minor 2'),
-            onChanged: (value) {
+            onChanged: (actChosen) {
               setState(() {
-                chosenCamper.dailyActivitiesOfCamper[1] = value;
+                minor1 = actChosen;
+                print('the first minor is ${actChosen.name}');
               });
             },
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          DropdownButton<Activity>(
+            value: minor2,
+            hint: minor2 == null ? Text('Minor 2') : Text('${minor2.name}'),
             items: Provider.of<Activities>(context).activities2.map((act) {
               return DropdownMenuItem<Activity>(
                 value: act,
                 child: Text(act.name),
               );
             }).toList(),
-          ),
-          SizedBox(height: 10,),
-           DropdownButton<Activity>(
-            hint: Text('Minor 3'),
-            onChanged: (value) {
+            onChanged: (actChosen2) {
               setState(() {
-                chosenCamper.dailyActivitiesOfCamper[2] = value;
+                minor2 = actChosen2;
+                print('the second minor is ${actChosen2.name}');
               });
             },
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          DropdownButton<Activity>(
+            value: minor3,
+            hint: Text('Minor 3'),
             items: Provider.of<Activities>(context).activities3.map((act) {
               return DropdownMenuItem<Activity>(
                 value: act,
                 child: Text(act.name),
               );
             }).toList(),
+            onChanged: (actChosen3) {
+              setState(() {
+                minor3 = actChosen3;
+                print('3rd minor is ${actChosen3.name} ');
+              });
+            },
           ),
         ],
       ),
     );
   }
 }
+
+//  //MINOR 1'DE DENEMELER YAPTIM AMA MINOR 2 HİÇ DEĞİŞMEDİ
+
+//           DropdownButton<Activity>(
+//             hint: Text('Minor 2'),
+
+//             onChanged: (value) {
+//               setState(() {
+//                 chosenCamper.dailyActivitiesOfCamper[1] = value;
+//               });
+//             },
+//             items: Provider.of<Activities>(context).activities2.map((act) {
+//               return DropdownMenuItem<Activity>(
+//                 value: act,
+//                 child: Text(act.name),
+//               );
+//             }).toList(),
+//           ),
